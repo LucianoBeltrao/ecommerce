@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit5ed6a7f9856032430a1f294927fdb7cf
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/hcodebr/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'H' => 
+        array (
+            'Hcode\\' => 6,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Hcode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hcodebr/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -28,6 +38,7 @@ class ComposerStaticInit5ed6a7f9856032430a1f294927fdb7cf
     );
 
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
         'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
         'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
@@ -41,7 +52,8 @@ class ComposerStaticInit5ed6a7f9856032430a1f294927fdb7cf
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit5ed6a7f9856032430a1f294927fdb7cf::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5ed6a7f9856032430a1f294927fdb7cf::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5ed6a7f9856032430a1f294927fdb7cf::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit5ed6a7f9856032430a1f294927fdb7cf::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit5ed6a7f9856032430a1f294927fdb7cf::$classMap;
 
